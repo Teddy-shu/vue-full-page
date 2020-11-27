@@ -1,32 +1,54 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+/*
+import { mapActions } from 'vuex'
+import MainToolbar from './components/MainToolbar.vue'
+import MemberIntro from './components/MemberIntro.vue'
+import Carousel from './components/Carousel.vue'
+import BottomNav from './components/BottomNav.vue'
+*/
+export default {
+  name: 'App'
 
-#nav {
-  padding: 30px;
-}
+/*
+  components: {
+    MainToolbar,
+    MemberIntro,
+    Carousel,
+    BottomNav
+  },
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  data: () => ({
+    //
+  }),
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+  methods: {
+    ...mapActions(['initialSakaMember']),
+
+    getChangedGroupNumber () {
+      let ChangedGroupNumber = 0
+      if (window.innerWidth < 600) {
+        ChangedGroupNumber = 3
+      } else if (window.innerWidth < 960) {
+        ChangedGroupNumber = 4
+      } else {
+        ChangedGroupNumber = 5
+      }
+      return ChangedGroupNumber
+    }
+  },
+
+  created () {
+    this.initialSakaMember({
+      groupMemberCount: this.getChangedGroupNumber(),
+      selectedTeam: 'nogizaka46'
+    })
+  }
+  */
 }
-</style>
+</script>
